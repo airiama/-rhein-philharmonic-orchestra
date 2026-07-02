@@ -66,8 +66,7 @@ section {
 /* ================= HERO ================= */
 .hero {
   height: 100vh;
-  /* css 폴더에서 한 단계 위로 올라간 뒤 images 폴더로 접근 */
-  background-image: url("images/hero-banner.JPG");
+  background-image: url("../images/hero-banner.JPG");
   background-size: cover;
   background-position: center;
   position: relative;
