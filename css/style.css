@@ -200,6 +200,7 @@ section {
 
 /* 오른쪽 정보 */
 .performance-info {
+  font-size: 14px;
   width: 55%;
   padding: 50px;
   overflow-y: auto;
