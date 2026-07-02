@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>라인필하모닉 오케스트라</title>
 
-  <!-- CSS 폴더 안의 style.css로 경로 수정 -->
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="style1.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,8 +50,7 @@
 
       <!-- 왼쪽 이미지 -->
       <div class="performance-image">
-        <!-- 이미지 경로 수정 -->
-        <img src="images/poster.jpg" alt="연주회 포스터">
+        <img src="연주회포스터.jpg">
 
         <div class="badge-wrap">
           <span class="badge white">정기연주회</span>
@@ -67,16 +65,14 @@
 
       <!-- 오른쪽 정보 -->
       <div class="performance-info">
+
         <div class="info-list">
-          <!-- span을 strong으로 변경 -->
-          <div class="info-item"><div><strong>일시</strong><p>2026.11.21 (토)</p></div></div>
-          <div class="info-item"><div><strong>시간</strong><p>오후 7시 30분</p></div></div>
-          <div class="info-item"><div><strong>장소</strong><p>청주아트홀</p></div></div>
-          <div class="info-item"><div><strong>입장료</strong><p>전석 무료</p></div></div>
-           <!-- 지휘자 이름에 conductor-info 클래스 추가 -->
-          <div class="info-item"><div><strong>지휘</strong><p class="conductor-info">유영학</p></div></div>
+          <div class="info-item">📅 <div><span>일시</span><p>2026.11.21 (토)</p></div></div>
+          <div class="info-item">⏰ <div><span>시간</span><p>오후 7시 30분</p></div></div>
+          <div class="info-item">📍 <div><span>장소</span><p>청주아트홀</p></div></div>
+          <div class="info-item">🎫 <div><span>입장료</span><p>전석 무료</p></div></div>
+          <div class="info-item">🎼 <div><span>지휘</span><p>유영학</p></div></div>
         </div>
-      </div>
 
         <hr>
 
@@ -179,6 +175,8 @@
         allowfullscreen>
       </iframe>
 
+    
+
     </div>
 
   </div>
@@ -193,13 +191,11 @@
     <div class="about-left">
 
       <div class="image-wrapper">
-        <!-- 이미지 경로 수정 -->
-        <img src="images/intro.jpg" alt="오케스트라">
+        <img src="소개.jpg" alt="오케스트라">
 
         <!-- 겹치는 카드 -->
         <div class="profile-card">
-          <!-- 이미지 경로 수정 -->
-          <img src="images/conductor.jpg" alt="지휘자">
+          <img src="conductor.jpg">
           <div>
             <p class="role">지휘자</p>
             <h4>유 영 학</h4>
@@ -274,13 +270,14 @@
     <!-- 슬라이드 영역 -->
     <div class="slider-window">
       <div class="slides" id="slides">
-        <!-- 이미지 경로 수정 -->
-        <img src="images/gallery-4.JPG" class="slide">
-        <img src="images/gallery-1.JPG" class="slide">
-        <img src="images/gallery-2.JPG" class="slide">
-        <img src="images/gallery-3.JPG" class="slide">
-        <img src="images/gallery-4.JPG" class="slide">
-        <img src="images/gallery-1.JPG" class="slide">
+        <!-- 마지막 이미지를 맨 앞에 복사 (무한루프용) -->
+        <img src="갤4.JPG" class="slide">
+        <img src="갤1.JPG" class="slide">
+        <img src="갤2.JPG" class="slide">
+        <img src="갤3.JPG" class="slide">
+        <img src="갤4.JPG" class="slide">
+        <!-- 첫 이미지를 맨 뒤에 복사 (무한루프용) -->
+        <img src="갤1.JPG" class="slide">
       </div>
     </div>
 
@@ -322,11 +319,17 @@
   </div>
 </footer>
 
-<!-- 자바스크립트 (js 폴더 안의 script.js로 경로 수정) -->
-<script src="js/script.js"></script>
+
+
+
+
+<!-- 자바스크립트 -->
+<script src="script.js"></script>
 
 <!-- 유튜브 API -->
 <script src="https://www.youtube.com/iframe_api"></script>
+
+
 
 </body>
 </html>
