@@ -233,6 +233,8 @@ section {
     color: #007bff; /* 파란색 계열 등을 사용하면 눈에 훨씬 잘 띕니다 */
     font-size: 1.1em;
 
+}
+
 /* 프로그램 */
 .program {
   margin-top: 20px;
