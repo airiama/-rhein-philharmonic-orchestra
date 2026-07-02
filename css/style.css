@@ -205,34 +205,35 @@ section {
   overflow-y: auto;
 }
 
-/* 정보 리스트 */
-/* 1. 전체적인 가독성을 위해 항목 간격과 폰트 크기 조정 */
+/* 정보 리스트 항목 */
 .info-item {
-    margin-bottom: 15px;
-    font-size: 16px; /* 폰트를 조금 더 크게 키웁니다 */
-    line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
-/* 2. '일시', '시간', '장소' 같은 라벨(제목)을 눈에 띄게 강조 */
+/* HTML의 <strong> 태그를 강조 */
 .info-item strong {
-    color: #333; /* 텍스트 색상을 진하게 */
-    font-weight: 800; /* 아주 굵게 */
-    margin-right: 10px; /* 제목과 내용 사이 간격 */
-    display: inline-block;
-    min-width: 60px; /* 제목 너비를 일정하게 맞춰 정렬 */
+  color: #333;
+  font-weight: 800;
+  margin-right: 15px; /* 내용과 간격을 조금 더 줌 */
+  display: inline-block;
+  min-width: 60px;
 }
 
-/* 3. 내용 부분 색상 대비 조정 */
-.info-item span {
-    color: #555; /* 너무 검정색이 아닌 짙은 회색으로 편안하게 */
+/* <p> 태그의 기본 색상 설정 */
+.info-item p {
+  display: inline;
+  color: #555;
+  margin: 0;
 }
 
-/* 4. 지휘자나 중요한 정보는 별도 강조 */
+/* 지휘자 강조 스타일 (색상 가독성 향상) */
 .conductor-info {
-    font-weight: bold;
-    color: #007bff; /* 파란색 계열 등을 사용하면 눈에 훨씬 잘 띕니다 */
-    font-size: 1.1em;
-
+  font-weight: bold;
+  color: #2c3e50; /* 너무 밝은 색(#f4f8cd)은 배경에서 안 보일 수 있어 진한 색으로 변경 */
+  font-size: 1.1em;
+  display: inline;
 }
 
 /* 프로그램 */
