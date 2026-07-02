@@ -1,0 +1,565 @@
+/* ===== RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffffff;
+  color: #111;
+  padding-top: 80px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== 공통 컨테이너 ===== */
+.container,
+.header_container,
+.media-container,
+.about-container,
+.footer-container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* 공통 섹션 여백 */
+section {
+  padding: 120px 0;
+}
+
+/* ================= HEADER ================= */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #0f1115;
+  z-index: 1000;
+}
+
+.header_container {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.nav a {
+  color: white;
+  margin-left: 30px;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.nav a:hover {
+  opacity: 0.7;
+}
+
+/* ================= HERO ================= */
+.hero {
+  height: 100vh;
+  background-image: url("배너.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+}
+
+.hero_text {
+  position: absolute;
+  right: 8%;
+  bottom: 15%;
+  font-family: 'Playfair Display', serif;
+}
+
+/* 모바일 대응: 화면 너비 768px 이하 */
+@media (max-width: 768px) {
+    .hero_text {
+        right: 5%;
+        bottom: 5%;
+        font-size: 40px; /* 글자 크기 줄임 */
+    }
+
+    .hero_text p {
+        font-size: 12px;
+    }
+}
+
+/* 작은 모바일: 480px 이하 */
+@media (max-width: 480px) {
+    .hero_text {
+        right: 5%;
+        bottom: 5%;
+        font-size: 28px; /* 더 작게 */
+    }
+
+    .hero_text p {
+        font-size: 10px;
+    }
+}
+
+.hero_text h1 {
+  font-size: 80px;
+  line-height: 1.1;
+  letter-spacing: 2px;
+}
+
+.hero_text p {
+  margin-top: 10px;
+  border-top: 2px solid white;
+  padding-top: 10px;
+}
+
+/* ================= 공연 안내 ================= */
+.performance-section {
+  background: #ffffff;
+}
+
+.section-eng {
+  letter-spacing: 3px;
+  font-size: 12px;
+  color: #caa96b;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* 카드 */
+.performance-card {
+  width: 100%;
+  display: flex;
+  background: #0f1115;
+  color: white;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* 왼쪽 이미지 */
+.performance-image {
+  width: 45%;
+  position: relative;
+}
+
+.performance-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 배지 */
+.badge-wrap {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.badge {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.badge.white {
+  background: white;
+  color: black;
+}
+
+.badge.dark {
+  background: #555;
+  color: white;
+}
+
+/* 이미지 제목 */
+.performance-title {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+}
+
+/* 오른쪽 정보 */
+.performance-info {
+  width: 55%;
+  padding: 50px;
+  overflow-y: auto;
+}
+
+/* 정보 리스트 */
+.info-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.info-item span {
+  font-size: 12px;
+  color: #9aa0a6;
+}
+
+.info-item p {
+  font-size: 14px;
+}
+
+/* 프로그램 */
+.program {
+  margin-top: 20px;
+}
+
+.program h4 {
+  color: #9aa0a6;
+  margin-bottom: 10px;
+}
+
+.piece {
+  margin-bottom: 12px;
+}
+
+.composer {
+  font-size: 12px;
+  color: #9aa0a6;
+}
+
+.intermission {
+  text-align: center;
+  color: #777;
+  margin: 15px 0;
+}
+
+/* ================= MEDIA ================= */
+.media {
+  background: radial-gradient(circle, #111 0%, #000 100%);
+  color: white;
+}
+
+.media-container {
+  display: flex;
+  gap: 60px;
+}
+
+.media-left {
+  width: 400px;
+}
+
+.media-title {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+/* 유튜브 버튼 */
+.youtube-btn {
+  display: inline-block;
+  margin-bottom: 25px;
+  padding: 10px 18px;
+  border: 1px solid red;
+  color: red;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.youtube-btn:hover {
+  background: red;
+  color: white;
+}
+
+
+
+/* 영상 리스트 */
+.video-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.video-item {
+  display: flex;
+  gap: 15px;
+  background: rgba(255,255,255,0.05);
+  padding: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.video-item:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+.video-item img {
+  width: 80px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* 오른쪽 영상 */
+.media-right {
+  flex: 1;
+}
+
+#player {
+  width: 100%;
+  height: 500px;
+}
+
+/* ================= ABOUT ================= */
+.about {
+  background: #f8f8f8;
+}
+
+.about-container {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+/* 이미지 */
+.image-wrapper {
+  position: relative;
+}
+
+.image-wrapper img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* 카드 */
+.profile-card {
+  position: absolute;
+  bottom: -20px;
+  left: 20px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  background: white;
+  padding: 12px 18px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.profile-card img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* 오른쪽 텍스트 */
+.about-eng {
+  font-size: 12px;
+  letter-spacing: 3px;
+  color: #8B7530;
+  margin-bottom: 10px;
+}
+
+.about-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about-title span {
+  color: #8B7530;
+}
+
+.about-desc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* 통계 */
+.about-stats {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  gap: 15px;
+}
+
+.stat-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+/* 위 작은 영어 글씨 */
+.gallery-subtitle{
+    font-size:12px;
+    letter-spacing:4px;
+    color:#c2a96a;
+    margin-bottom:10px;
+}
+
+/* 메인 제목 */
+.gallery-main{
+    font-size:36px;
+    font-weight:800;
+    color:#1c2230;
+    margin-bottom:15px;
+}
+
+/* 밑줄 */
+.title-line{
+    width:40px;
+    height:4px;
+    background:#1c2230;
+    margin:0 auto;
+    border-radius:2px;
+}
+
+.gallery{
+    padding:100px 0;
+    background:#ffffff;
+}
+
+.slider{
+    width:1000px;
+    margin:0 auto;
+    position:relative;
+}
+
+.slider-window{
+    width:1000px;
+    height:500px;       /* 이미지 높이와 맞춤 */
+    overflow:hidden;    /* 넘치는 이미지 숨김 */
+}
+
+/* 슬라이드 가로 정렬 */
+.slides{
+    display:flex;
+    transition:0.5s;
+}
+
+/* 이미지 한 장만 보이도록 */
+.slide{
+    width:1000px;
+    height:500px;
+    flex-shrink:0;
+    object-fit: contain;    /* 이미지 전체 보이기 */
+    background-color:#000;  /* 여백 색상 */
+}
+
+/* 화살표 */
+.arrow{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    background:rgba(0,0,0,0.5);
+    color:white;
+    border:none;
+    font-size:30px;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+.left{ left:-70px; }
+.right{ right:-70px; }
+
+/* ================= FOOTER ================= */
+.footer {
+  background: #0a0a0a;
+  color: #aaa;
+  padding: 60px 0 30px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-title {
+  color: white;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.sns-title {
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.sns-icons {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.sns {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+.youtube {
+  background: #ff0000;
+}
+
+.instagram {
+  background: linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid #222;
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 로고 a 링크 기본 스타일 제거 */
+.logo a {
+  color: inherit;       /* 글자색을 부모 h1 색상과 동일하게 */
+  text-decoration: none; /* 밑줄 제거 */
+  display: inline-block; /* 필요시 블록처럼 처리 */
+}
+
+/* 호버 시 원하는 효과 (선택 사항) */
+.logo a:hover {
+  color: #fff;          /* 흰색으로 변경 예시 */
+  text-decoration: none;
+}
